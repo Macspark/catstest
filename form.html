@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style-min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+
+        <div class="page-header__logo-wrapper">
+          <a href="index.html" class="page-header__logo">
+            <picture>
+              <source srcset="./img/logo-desktop.svg" media="(min-width: 1300px)">
+              <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)">
+              <img src="./img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
+            </picture>
+          </a>
+        </div>
+
+        <nav class="main-nav main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="page-main">
+
+      <form class="apply" action="https://echo.htmlacademy.ru" method="post">
+        <div class="apply__wrapper">
+          <h1 class="apply__title">Подбор программы</h1>
+          <p class="apply__text">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
+        </div>
+
+        <div class="apply__cat-info">
+
+          <fieldset class="apply__fieldset fieldset">
+            <div class="fieldset__wrapper">
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-name">Имя:*</label>
+                  <input class="fieldset__input" id="input-name" type="text" name="cat-name" placeholder="Барсик" required="">
+                </li>
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-weight">Вес (кг):*</label>
+                  <input class="fieldset__input" id="input-weight" type="number" name="cat-weight" placeholder="7" required="">
+                </li>
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-age">Возраст (лет):</label>
+                  <input class="fieldset__input" id="input-age" type="number" name="cat-age" placeholder="7">
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="apply__fieldset fieldset fieldset--bordered">
+            <div class="fieldset__wrapper">
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <input class="visually-hidden fieldset__radio" id="input-slim" type="radio" name="cat-program" value="slim" checked="">
+                  <label class="fieldset__label fieldset__label--radio" for="input-slim">Похудение</label>
+                </li>
+                <li class="fieldset__item">
+                  <input class="visually-hidden fieldset__radio" id="input-pro" type="radio" name="cat-program" value="pro">
+                  <label class="fieldset__label fieldset__label--radio" for="input-pro">Набор массы</label>
+                </li>
+                <li class="fieldset__item">
+                  <input class="visually-hidden fieldset__radio" id="input-advice" type="radio" name="cat-program" value="advice">
+                  <label class="fieldset__label fieldset__label--radio" for="input-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+        </div>
+
+        <fieldset class="apply__fieldset apply__fieldset--longermargin fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <h3 class="fieldset__title">Контактные данные (владельца кота)</h3>
+            <ul class="fieldset__list fieldset__list--contact">
+              <li class="fieldset__item fieldset__item--email">
+                <label class="fieldset__label" for="input-email">E-mail:*</label>
+                <input class="fieldset__input" id="input-email" type="email" name="email" placeholder="kuklachev@gmail.com" required="">
+                <svg class="fieldset__mail-icon" width="18" height="14" x="0px" y="0px" viewBox="0 0 17 13">
+                  <use xlink:href="./img/sprite.svg#icon-mail"></use>
+                </svg>
+
+              </li>
+              <li class="fieldset__item fieldset__item--tel">
+                <label class="fieldset__label" for="input-tel">Телефон:*</label>
+                <input class="fieldset__input" id="input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required="">
+                <svg class="fieldset__phone-icon" width="21" height="21" viewBox="0 0 20 20">
+                  <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__fieldset fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <h3 class="fieldset__title">Комментарий</h3>
+            <textarea class="fieldset__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__fieldset fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <h3 class="fieldset__title fieldset__title--extra">Дополнительно</h3>
+            <ul class="fieldset__list fieldset__list--extra">
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="visually-hidden fieldset__checkbox" id="input-sweet" type="checkbox" name="sweetener" checked="">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-sweet">Сахарозаменитель</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="visually-hidden fieldset__checkbox" id="input-water" type="checkbox" name="water">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-water">Питьевая вода</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="visually-hidden fieldset__checkbox" id="input-milk" type="checkbox" name="milk">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-milk">Молоко</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="visually-hidden fieldset__checkbox" id="input-vitamins" type="checkbox" name="vitamins">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-vitamins">Витамины</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <div class="apply__wrapper">
+          <button class="button apply__button" type="submit">Отправить заявку</button>
+          <small class="apply__small">* — Обязательные поля</small>
+        </div>
+
+      </form>
+
+      <section class="contact contact--grey">
+
+        <div class="contact__wrapper">
+          <div class="contact__info">
+            <h3 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <div class="contact__address">
+              <p class="contact__text">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="contact__text">Санкт-Петербург</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__map" id="map">
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+        <a href="index.html" class="page-footer__logo">
+          <img src="./img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a href="https://vk.com" target="_blank" class="social__link social__link--vk" aria-label="Мы ВКонтакте">
+              <svg width="22" height="12">
+                <use xlink:href="./img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://instagram.com" target="_blank" class="social__link social__link--insta" aria-label="Мы в Инстаграме">
+              <svg width="17" height="17">
+                <use xlink:href="./img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://facebook.com" target="_blank" class="social__link social__link--fb" aria-label="Мы в Фейсбуке">
+              <svg width="10" height="19">
+                <use xlink:href="./img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="page-footer__copyright copyright">
+          <p class="copyright__text">HTML Academy</p>
+          <svg width="27" height="34" viewBox="0 0 26.943 34.09">
+              <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
+          </svg>
+        </a>
+
+      </div>
+    </footer>
+
+    <script src="./js/picturefill-min.js"></script>
+    <script src="./js/svgxuse.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1?bab3bdb3-8438-46cd-a063-248910568936&load=package.full&lang=ru_RU"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/map.js"></script>
+  </body>
+</html>
